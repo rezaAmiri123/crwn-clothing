@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Connect, connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 import './App.css';
 
@@ -51,8 +51,11 @@ class App extends React.Component {
   }
 }
 
-const mapDispatchToProps = disptch => ({
-  setCurrentUser: user => disptch(setCurrentUser(user))
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);

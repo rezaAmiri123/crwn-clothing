@@ -1,5 +1,5 @@
 import React from 'react';
-import { Connect, connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 import CustomButton from '../custom-button/custom-button.component';
 import { addItem } from '../../redux/cart/cart.actions';
@@ -28,11 +28,11 @@ const CollectionItem = ({ item, addItem }) => {
   );
 };
 
-const mapDispathToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 });
 
 export default connect(
   null,
-  mapDispathToProps
+  mapDispatchToProps
 )(CollectionItem);

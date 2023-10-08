@@ -9,9 +9,9 @@ const persistConfig = {
   key: 'root',
   storage,
   whitelist: ['cart']
-}
+};
 
-const rootReducer =  combineReducers({
+const rootReducer = combineReducers({
   user: userReducer,
   cart: cartReducer
 });

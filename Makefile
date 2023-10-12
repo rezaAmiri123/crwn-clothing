@@ -3,3 +3,8 @@ node-10:
 
 start:
 	npm start
+
+docker_compose:
+	@echo Starting  docker compose
+	docker-compose -f docker-compose.yaml up
+

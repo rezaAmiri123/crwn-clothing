@@ -30,8 +30,9 @@ class SignUp extends React.Component {
       return;
     }
 
-    signUpStart({displayName, email, password});
+    signUpStart({ displayName, email, password });
   };
+
   handleChange = event => {
     const { name, value } = event.target;
 
@@ -84,11 +85,11 @@ class SignUp extends React.Component {
   }
 }
 
-const mapdispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 });
 
 export default connect(
   null,
-  mapdispatchToProps
+  mapDispatchToProps
 )(SignUp);
